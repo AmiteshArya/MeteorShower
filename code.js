@@ -85,7 +85,6 @@ function setGame()
   }
 }
 //starts meteor falling when the play button is clicked.
-//created by my partner Aditya
 onEvent("titlePlay", "click", function( ) {
   if (getText("difficultyDropdown") == "Hard")
   {
