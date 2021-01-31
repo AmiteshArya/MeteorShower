@@ -1,5 +1,4 @@
 //Creating lists to be randomly filled and settings inititial meteor positions
-//Created by Me, Amitesh Arya
 var num1 = [];
 var operation = [];
 var num2 = [];
@@ -16,7 +15,7 @@ var difficulty = 1.5;
 
 
 //function to start game, returns time when called.
-//created by Partner, Aditya
+
 function playGame(){
 
 beginGame();
@@ -34,7 +33,6 @@ playGame();
 
 
 //fills num lists and operations list randomly within their bounds
-//created by me
 function beginGame()
 {
  
@@ -45,7 +43,6 @@ function beginGame()
 }
 
 //randomly fill lists within the bounds given
-//Created by Aditya
 function fillList(list, lowerBound, upperBound)
 {
   for(var i = 0; i < 15; i++)
@@ -56,7 +53,6 @@ function fillList(list, lowerBound, upperBound)
 }
 
 //fills the solutions list using information from the previous three lists
-//created by me
 function solutionGen(num1, operation, num2) 
 {
   for(var i = 0; i < 15; i++)
@@ -71,7 +67,6 @@ function solutionGen(num1, operation, num2)
 }
 
 //function to update the questions using information from the num1, num2, operation, and solutions lists.
-//created by partner, Aditya
 function setGame()
 {
   setText("num1Box",num1[gameSetCount]);
@@ -107,7 +102,6 @@ onEvent("titlePlay", "click", function( ) {
   });
 
 //checks if the user's answer is correct, blinks input box border to green briefly if it is correct.
-//created by me
 
 
 onEvent("answerInput", "input", function( ) {
@@ -141,7 +135,6 @@ onEvent("answerInput", "input", function( ) {
 });
 
 //animates meteors falling and updates their y positions
-//created by Amitesh Arya
 function skyFall(difficulty)
 {
   timedLoop(42,function(){
@@ -176,7 +169,6 @@ timedLoop(42,function(){
 
 
 //clears lists and resets positions and counters to prepare for a new game
-//created by my partner Aditya
 function endGame()
 {
   num1 = [];
@@ -200,19 +192,16 @@ onEvent("gameOverHome", "click", function( ) {
 	endGame();
 });
 //returns to titleScreen when clicked and sets up for a new game.
-//created by my partner, Aditya
 onEvent("congratulationsHome", "click", function( ) {
 	setScreen("titleScreen");
 	stopTimedLoop();
 	endGame();
 });
 //returns to titleScreen when clicked and sets up for a new game.
-//created by me, Amitesh Arya
 onEvent("instructionHome", "click", function( ) {
 	setScreen("titleScreen");
 });
 //returns to titleScreen when clicked.
-//created by my partner Aditya
 onEvent("titleInstructions", "click", function( ) {
 	setScreen("instructionScreen");
 });
@@ -230,6 +219,6 @@ Home Button Image: https://www.reverbsf.com/wp-content/uploads/2017/04/home-logo
 Audio Source:
 Suspenseful Theme Music:https://www.youtube.com/watch?v=XAYhNHhxN0A
 
-Created by Amitesh Arya & Aditya Katariya
+Created by Amitesh Arya
 
 */
